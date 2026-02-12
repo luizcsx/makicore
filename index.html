@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makicore - Início</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --maki-blue: #0969da;
+            --maki-text: #1f2328;
+            --maki-border: #d0d7de;
+            --maki-bg-gray: #f6f8fa;
+            --code-bg: #1b1f23;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { color: var(--maki-text); line-height: 1.6; background: #fff; overflow-x: hidden; }
+
+        header {
+            background-color: #24292e;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .maki-logo-full {
+            height: 35px;
+            width: auto;
+            display: block;
+            content: url('https://via.placeholder.com/150x35/24292e/ffffff?text=LOGO_MAKICORE');
+        }
+
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: #d1d5da; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; }
+
+        .main-layout {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+
+        .hero-title { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; color: var(--maki-blue); margin-bottom: 10px; letter-spacing: -1px; }
+        .hero-subtitle { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
+        
+        .feature-list { list-style: none; margin: 20px 0; }
+        .feature-list li { margin-bottom: 15px; padding-left: 20px; position: relative; }
+        .feature-list li::before { content: "•"; color: var(--maki-blue); position: absolute; left: 0; font-weight: bold; }
+
+        .code-window {
+            background: var(--code-bg); color: #adbac7; padding: 20px; border-radius: 8px;
+            font-family: 'Consolas', monospace; font-size: 14px; margin: 25px 0;
+            position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .code-window::before { content: "maki-system"; position: absolute; top: 5px; right: 10px; font-size: 10px; color: #6e7681; }
+        .keyword { color: #f47067; }
+        .func { color: #dcbdfb; }
+        .string { color: #96d0ff; }
+
+        .sidebar { display: flex; flex-direction: column; gap: 30px; }
+        .sidebar-box { background: var(--maki-bg-gray); border: 1px solid var(--maki-border); padding: 20px; border-radius: 6px; }
+        
+        .social-btn {
+            display: block; text-align: center; border: 1px solid var(--maki-border);
+            padding: 10px; border-radius: 6px; text-decoration: none; color: #24292e;
+            font-weight: 600; font-size: 14px; transition: 0.2s; margin-top: 15px;
+        }
+        .social-btn:hover { background: #fff; border-color: var(--maki-blue); color: var(--maki-blue); }
+
+        .recent-posts { list-style: none; padding-top: 10px; }
+        .recent-posts li { margin-bottom: 12px; font-size: 14px; }
+        .recent-posts li a { color: var(--maki-blue); text-decoration: none; }
+
+        @media (max-width: 850px) {
+            .main-layout { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 12px; color: #6e7681; border-top: 1px solid var(--maki-border); margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <div class="maki-logo-full"></div>
+    </a>
+    <nav class="nav-links">
+        <a href="index.html" class="active">Início</a>
+        <a href="guia.html">Guia para Iniciantes</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="https://github.com/luizcsx/makicore" target="_blank">Repositório</a>
+    </nav>
+</header>
+
+<div class="main-layout">
+    <main>
+        <h1 class="hero-title">Makicore é rápido, lógico e educacional.</h1>
+        <p class="hero-subtitle">Um console tátil e uma linguagem de programação criados para estudantes.</p>
+        
+        <p>O ecossistema Makicore oferece:</p>
+        <ul class="feature-list">
+            <li><strong>Hardware Tátil:</strong> Console baseado em engenharia de dobras estruturais.</li>
+            <li><strong>Programação Maki:</strong> Programação simplificada para automação de problemas matemáticos.</li>
+            <li><strong>Foco Escolar:</strong> Adequado para o Ensino Fundamental I e II.</li>
+        </ul>
+
+        <div class="code-window">
+            <span class="keyword">import</span> maki.console.*;<br><br>
+            <span class="keyword">func</span> <span class="func">iniciar_exemplo</span>() {<br>
+            &nbsp;&nbsp;print(<span class="string">"Isto é um exemplo..."</span>);<br>
+            &nbsp;&nbsp;<span class="keyword">definir</span> objeto = <span class="string">"cubo"</span>;<br>
+            }
+        </div>
+
+        <h2 style="margin-top: 40px; border-bottom: 1px solid var(--maki-border); padding-bottom: 10px;">Funcionalidades Futuras:</h2>
+        <ul class="feature-list">
+            <li><strong>Minigames de Matemática:</strong> Serão introduzidas os "minigames" de matemática.</li>
+            <li><strong>Criação de contas:</strong> Sistema de criação de contas serão adicionadas.</li>
+        </ul>
+    </main>
+
+    <aside class="sidebar">
+        <div class="sidebar-box">
+            <p style="font-size: 14px;">Acompanhe o desenvolvimento e as novidades do projeto!</p>
+            <a href="https://instagram.com/luiz.sdat/" class="social-btn">Apoie-nos no Instagram!</a>
+        </div>
+
+        <div>
+            <h3 style="font-size: 13px; color: #57606a; text-transform: uppercase;">Postagens Recentes:</h3>
+            <ul class="recent-posts">
+                <li><a href="#">• A evolução do Block-Step para o Makicore</a></li>
+                <li><a href="#">• Como a programação Maki ajuda no raciocínio</a></li>
+                <li><a href="#">• Manual: Como montar seu console de papelão</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    © 2026 Makicore. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
