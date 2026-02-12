@@ -9,12 +9,12 @@ O Makicore é um ecossistema projetado para transformar a experiência de aprend
 
 ### Pilares do Projeto:
 * **Jogos Educativos:** Experiências interativas adequadas para o ambiente escolar.
-* **M.M.M. (Manual de Matemática):** Módulos curriculares do 1º ao 9º ano integrados nativamente.
+* **Manual de Matemática:** Módulos curriculares do 1º ao 9º ano integrados nativamente.
 * **Linguagem Maki:** Uma sintaxe simplificada criada para introduzir crianças à lógica de programação de forma intuitiva.
 
 ---
 
-## 💻 A Linguagem Maki
+## A Linguagem Maki
 A Maki foi desenvolvida para ser a ponte entre a construção física e a lógica digital. É rápida, semântica e focada em resultados.
 
 ```maki
