@@ -1,7 +1,5 @@
 ## Makicore
 
-**Desenvolvido por: Luiz Miguel** *Uma plataforma independente de hardware tátil e software educacional.*
-
 ---
 
 ## O que é o Makicore?
@@ -18,8 +16,7 @@ O Makicore é um ecossistema projetado para transformar a experiência de aprend
 A Maki foi desenvolvida para ser a ponte entre a construção física e a lógica digital. É rápida, semântica e focada em resultados.
 
 ```maki
-criar objeto "cubo_matematico"
-definir desafio = "5 x 5"
-se_acertar {
-    exibir "Parabéns! Estrutura liberada."
+func iniciar_exemplo() {
+  print("Isto é um exemplo...");
+  definir objeto = "cubo";
 }
